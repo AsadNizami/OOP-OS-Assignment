@@ -29,5 +29,5 @@ int main(){
         cin >> tq;
         sch.RR(prc.pr, tq);
     }
-    forn(i, sim_time)   prc.pr[i].print_info();
+    // forn(i, sim_time)   prc.pr[i].print_info();
 }

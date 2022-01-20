@@ -1,9 +1,4 @@
-#include <bits/stdc++.h>
 #include <fstream>
-using namespace std;
-#define forn(x, n) for(int x=0; x<n; x++)
-#define pb push_back
-
 
 struct compare_at{
     bool operator()(Process &p1, Process &p2){
@@ -55,6 +50,8 @@ bool rec_order(struct record &r1, struct record &r2){
     if (r1.curr_time != r2.curr_time)
         return r1.curr_time < r2.curr_time;
     else
+        if (r1.status == "Arrived") return true;
+        if (r2.status == "Arrived") return false;
         return (r1.status == "Exit" ? true:false);
 }
 

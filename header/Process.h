@@ -1,4 +1,5 @@
 #include <time.h>
+
 class Process{
 public:
     static int pi;
@@ -21,9 +22,6 @@ public:
     }
 
     void print_info(){
-        // ofstream outfile;
-        // outfile.open("process.txt", ios_base::app);
-
         cout
         << "Process id: \t" << pid << '\n'
         << "Arrival time: \t" << arr_time << '\n'
