@@ -1,41 +1,40 @@
-1
 Process id: 	3
-Arrival time: 	0.616
-Burst time: 	2.189
-Completion time: 	3.599
-Turn around time: 	2.983
-Wait time: 	0.794
-Responce time: 	0
-
-Process id: 	4
-Arrival time: 	0.7
-Burst time: 	2.382
-Completion time: 	5.981
-Turn around time: 	5.281
-Wait time: 	2.899
-Responce time: 	2.899
-
-Process id: 	1
-Arrival time: 	0.845
-Burst time: 	0.794
-Completion time: 	1.639
-Turn around time: 	0.794
-Wait time: 	0
+Arrival time: 	0.808
+Burst time: 	2.608
+Completion time: 	6.278
+Turn around time: 	5.47
+Wait time: 	2.862
 Responce time: 	0
 
 Process id: 	2
-Arrival time: 	0.937
-Burst time: 	2.492
-Completion time: 	10.961
-Turn around time: 	10.024
-Wait time: 	7.532
-Responce time: 	7.532
+Arrival time: 	1.423
+Burst time: 	0.255
+Completion time: 	2.063
+Turn around time: 	0.64
+Wait time: 	0.385
+Responce time: 	0.385
+
+Process id: 	4
+Arrival time: 	1.705
+Burst time: 	0.732
+Completion time: 	4.295
+Turn around time: 	2.59
+Wait time: 	1.858
+Responce time: 	0.358
+
+Process id: 	1
+Arrival time: 	2.382
+Burst time: 	0.555
+Completion time: 	4.85
+Turn around time: 	2.468
+Wait time: 	1.913
+Responce time: 	0.681
 
 Process id: 	5
-Arrival time: 	2.214
-Burst time: 	2.488
-Completion time: 	8.469
-Turn around time: 	6.255
-Wait time: 	3.767
-Responce time: 	3.767
+Arrival time: 	2.511
+Burst time: 	1.32
+Completion time: 	6.17
+Turn around time: 	3.659
+Wait time: 	2.339
+Responce time: 	1.052
 
