@@ -3,7 +3,7 @@
 using namespace std;
 #define forn(x, n) for(int x=0; x<n; x++)
 #define pb push_back
-#include "header/Process.h"
+
 
 struct compare_at{
     bool operator()(Process &p1, Process &p2){
@@ -68,6 +68,11 @@ void insert(vector<record> &rec, Process &ele, string status, double curr_time){
 
 class Scheduler{
 public:
+    double sim_time;
+    Scheduler(double sim_t){
+        sim_time = sim_t;
+    }
+
     Process calc(Process &ele){
         ele.turn_time = ele.comp_time - ele.arr_time;
         ele.wait_time = ele.turn_time - ele.burst_time;
@@ -76,13 +81,14 @@ public:
     }
     void display_process(vector<Process> &order){
         ofstream outfile;
-        outfile.open("process.txt", ios_base::out);
+        outfile.open("Output/process.txt", ios_base::out);
         
         sort(order.begin(), order.end(), time_order);
 
         outfile << "PID\t" << "Arrival time\t" << "Burst time\t" 
         << "Completion time\t" << "Turn around time\t" << "Wait time\t" << "Response time\n";
         for(auto ele: order){
+            if (ele.arr_time > sim_time)   break;
             outfile << fixed << setprecision(3) << ele.pid << "\t" << ele.arr_time << "\t\t" <<
             ele.burst_time << "\t\t" << ele.comp_time << "\t\t" <<
             ele.turn_time << "\t\t\t" << abs(ele.wait_time) << "\t\t" << abs(ele.res_time) << "\n";
@@ -117,10 +123,11 @@ public:
 
     void display_status(vector<record> &rec){
         ofstream outfile;
-        outfile.open("status.txt", ios_base::out);
+        outfile.open("Output/status.txt", ios_base::out);
         
         outfile << "Time \t" << "Process ID \t" << "Status \n";
         for(auto r: rec){
+            if (r.curr_time > sim_time)   break;
             outfile << r.curr_time << "\t\t" << r.pid << "\t\t" << r.status << "\n";
         }
         outfile.close();
@@ -336,12 +343,3 @@ public:
         display_process(proc);
     }
 };
-
-
-// int main(){
-//     Scheduler sch;
-//     Process_Creator prc(5);
-//     // forn(i, 5)  prc.pr[i].print_info();
-//     sch.RR(prc.pr);
-//     forn(i, 5)  prc.pr[i].print_info();
-// }
