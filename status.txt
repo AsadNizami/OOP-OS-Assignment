@@ -1,0 +1,18 @@
+Time 	Process ID 	Status 
+0.616		3		Arrived
+0.616		3		Running
+0.7		4		Arrived
+0.845		1		Arrived
+0.845		3		Preempted
+0.845		1		Running
+0.937		2		Arrived
+1.639		1		Exit
+1.639		3		Running
+2.214		5		Arrived
+3.599		3		Exit
+3.599		4		Running
+5.981		4		Exit
+5.981		5		Running
+8.469		5		Exit
+8.469		2		Running
+10.961		2		Exit
